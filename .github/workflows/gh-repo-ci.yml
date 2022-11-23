@@ -1,11 +1,11 @@
 name: github repo continuous integration
 
-on:
-  push:
-    branches:
-      - main
-    paths:
-      - "src/readme.md"
+on: workflow_dispatch
+#  push:
+#    branches:
+#      - main
+#    paths:
+#      - "src/readme.md"
 
 permissions:
   contents: write

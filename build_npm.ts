@@ -11,19 +11,8 @@ const site_root = Deno.args[0] ?? "/"
 const npm_dir = "./npm/"
 const main_entrypoint = "./src/mod.ts"
 const sub_entrypoints = [
-	"./src/browser.ts",
-	"./src/crypto.ts",
-	"./src/devdebug.ts",
-	"./src/dotkeypath.ts",
-	"./src/eightpack.ts",
-	"./src/eightpack_varint.ts",
-	"./src/image.ts",
-	"./src/lambdacalc.ts",
-	"./src/numericarray.ts",
-	"./src/stringman.ts",
-	"./src/struct.ts",
-	"./src/typedbuffer.ts",
-	"./src/typedefs.ts",
+	"./src/submodule1.ts",
+	"./src/submodule2.ts",
 ]
 const tsconfig = {
 	"$schema": "https://json.schemastore.org/tsconfig",
@@ -44,18 +33,9 @@ const typedoc = {
 	readme: "./src/readme.md",
 	sidebarLinks: {
 		"readme": site_root,
-		"browser": site_root + "modules/browser.html",
-		"crypto": site_root + "modules/crypto.html",
-		"devdebug": site_root + "modules/devdebug.html",
-		"eightpack": site_root + "modules/eightpack.html",
-		"eightpack_varint": site_root + "modules/eightpack_varint.html",
-		"image": site_root + "modules/image.html",
-		"lambdacalc": site_root + "modules/lambdacalc.html",
-		"numericarray": site_root + "modules/numericarray.html",
-		"stringman": site_root + "modules/stringman.html",
-		"struct": site_root + "modules/struct.html",
-		"typedbuffer": site_root + "modules/typedbuffer.html",
-		"typedefs": site_root + "modules/typedefs.html",
+		"main": site_root + "modules/mod.html",
+		"submodule1": site_root + "modules/submodule1.html",
+		"submodule2": site_root + "modules/submodule2.html",
 	},
 	skipErrorChecking: true,
 	githubPages: true,
