@@ -1,0 +1,36 @@
+{
+	"name": "my_deno_project_name",
+	"version": "0.4.0",
+	"description": "a collection of personal utility functions",
+	"author": "Omar Azmi",
+	"license": "Lulz plz don't steal yet",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/user-name/my_deno_project_name.git"
+	},
+	"bugs": {
+		"url": "https://github.com/user-name/my_deno_project_name/issues"
+	},
+	"compilerOptions": {
+		"lib": [
+			"esnext",
+			"dom"
+		],
+		"strict": true,
+		"allowJs": true
+	},
+	"devDependencies": {
+		"typescript": "^4.9.3",
+		"typedoc": "^0.23.21",
+		"esbuild": "^0.15.14"
+	},
+	"node_packageManager": "npm",
+	"tasks": {
+		"build-dist": "deno run -A ./build_dist.ts",
+		"build-npm": "deno run -A ./build_npm.ts",
+		"build-npm-docs": "cd \"./npm/\" && npm run build-docs",
+		"build-npm-dist": "cd \"./npm/\" && npm run build-dist",
+		"clean": "deno run -A ./clean.ts",
+		"test": "deno test -A ./src/mod.ts"
+	}
+}
